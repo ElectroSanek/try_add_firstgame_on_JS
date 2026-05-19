@@ -1,0 +1,41 @@
+*{
+
+margin: 0;
+padding: 0;
+
+}
+
+html{
+
+display: flex;
+justify-content: center;
+background-color: rgb(59, 59, 59);
+
+}
+
+.main_form{
+
+margin-top: 150px;
+padding: 100px;
+background-color: rgb(20, 20, 20);
+display: inline-block;
+text-align: center;
+border: 1px solid white;
+border-radius: 10px;
+
+
+}
+
+
+.game_name{color: white; font-size: 40px;}
+.begin{
+
+margin: 30px;
+padding: 5px;
+border-color: white;
+border-width: 1px;
+background-color: rgb(20, 20, 20);
+color: white;
+border-radius: 15px;
+
+}
