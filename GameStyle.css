@@ -1,77 +1,56 @@
-*{margin: 0; padding: 0;}
+*{
+    margin: 0; 
+    padding: 0;
+}
 
 html{
-
-background-color: rgb(59, 59, 59);
-min-height: 100%;
-
+    background-color: rgb(59, 59, 59);
+    min-height: 100%;
 }
 
 body{
-
-display: flex;
-justify-content: center;
-align-items: center;
-
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .ability_screen{
-
-padding: 5px;
-border: 1px solid rgb(212, 212, 212);
-background-color: rgb(82, 82, 82);
-margin-right: 10px;
-border-radius: 10px;
-
+    padding: 5px;
+    border: 1px solid rgb(212, 212, 212);
+    background-color: rgb(82, 82, 82);
+    margin-right: 10px;
+    border-radius: 10px;
 }
 
 #game_board{
-margin-top: 100px;
-display: grid;
-grid-template-columns: repeat(10, 40px);
-grid-template-rows: repeat(10,40px);
-gap: 1px;
-background-color: black;
-border: 2px solid rgb(0, 0, 0);
-/* border-left-width: 3px;
-border-top-width: 3px; */
-border-bottom-width: 1px;
-
-
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 1px;
+    background-color: black;
+    border: 2px solid rgb(0, 0, 0);
+    border-bottom-width: 1px;
 }
 
-#game_board > *:not(.player, .slime, .slime2, .HP_potion){
-
-background-color: rgb(82, 82, 82);
-
+#game_board > *:not(.player):not(.slime):not(.slime2):not(.HP_potion){
+    background-color: rgb(82, 82, 82);
 }
 
 .player{
-
-background-color: rgb(39, 146, 196);
-grid-column: 1;
-grid-row: 1;
-
+    background-color: rgb(39, 146, 196);
 }
 
 .slime{
-
-background-color: rgb(134, 175, 21);
-
-
+    background-color: rgb(134, 175, 21);
 }
 
 .slime2{
-
-background-color: rgb(228, 120, 18);
-
-    
+    background-color: rgb(228, 120, 18);
 }
 
 .HP_potion{
-
-background-color: red;
-
+    background-color: red;
+    border-radius: 8px; /* Немного скруглим края, чтобы отличалось от персонажей */
 }
-

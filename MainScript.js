@@ -1,5 +1,3 @@
 function a(){
-
-window.location.replace('Game.html')
-
+    window.location.replace('Game.html');
 }

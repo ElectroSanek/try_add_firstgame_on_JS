@@ -3,50 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Slime & Steel</title>
     <link rel="stylesheet" href="GameStyle.css">
 </head>
 <body>
     <div class="ability_screen" id="ability_screen">
-
         <span>Сила: </span><span>5</span><br>
         <span>Ловкость: </span><span>5</span><br>
         <span>Шанс крита: </span><span id="crit_chance">5%</span><br>
         <span>HP: </span><span id="HP"></span>
-
     </div>
-<div id="game_board">
 
-<div class="player" id="player"></div>
-<div class="slime" id="slime"></div>
-<div class="slime2" id="slime2"></div>
-<div class="HP_poiton" id="HP_poiton"></div>
+    <div id="game_board">
+        <!-- Персонажи и объекты игрового мира -->
+        <div class="player" id="player"></div>
+        <div class="slime" id="slime"></div>
+        <div class="slime2" id="slime2"></div>
+        <div class="HP_potion" id="HP_potion"></div>
 
-
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div>
-<div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> <div class="block"></div> 
-
-</div>
+        <!-- Идеальная сетка 10х10 (РОВНО 100 БЛОКОВ) -->
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+        <div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div><div class="block"></div>
+    </div>
 
     <script src="GameScript.js"></script>
 </body>
