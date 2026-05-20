@@ -31,7 +31,6 @@ function POS(){
 }
 POS()
 
-// Функция проверки смерти игрока
 function checkPlayerDeath() {
     if (PlayerHP <= 0) {
         alert("Вы проиграли! Слаймы победили.");
@@ -39,6 +38,12 @@ function checkPlayerDeath() {
         return true;
     }
     return false;
+}
+
+function moveSlimes(skipSlime1 = false, skipSlime2 = false) {
+    if (!skipSlime1) processSingleSlime(slimePOS, slimeHP, slime, "Обычный слизень");
+    if (!skipSlime2) processSingleSlime(slime2POS, slime2HP, slime2, "Элитный слизень");
+    POS();
 }
 
 function processSingleSlime(slimePosObj, currentSlimeHP, slimeElement, slimeName) {
@@ -54,7 +59,7 @@ function processSingleSlime(slimePosObj, currentSlimeHP, slimeElement, slimeName
             PlayerHP -= 1;
             if (PlayerHP < 0) PlayerHP = 0;
             Health.innerHTML = PlayerHP;
-            console.log(`${slimeName} атакует! Твое HP: ${PlayerHP}`);
+            console.log(`${slimeName} атакует на своем ходу! Твое HP: ${PlayerHP}`);
             
             if (checkPlayerDeath()) return;
         } else {
@@ -109,12 +114,6 @@ function processSingleSlime(slimePosObj, currentSlimeHP, slimeElement, slimeName
     }
 }
 
-function moveSlimes() {
-    processSingleSlime(slimePOS, slimeHP, slime, "Обычный слизень");
-    processSingleSlime(slime2POS, slime2HP, slime2, "Элитный слизень");
-    POS();
-}
-
 function moveP(dx, dy){
     let nextX = playerPOS.x + dx;
     let nextY = playerPOS.y + dy;
@@ -148,7 +147,7 @@ function moveP(dx, dy){
 
         if (checkPlayerDeath()) return;
 
-        moveSlimes();
+        moveSlimes(false, true); 
         return;
     }
 
@@ -179,14 +178,15 @@ function moveP(dx, dy){
 
         if (checkPlayerDeath()) return;
 
-        moveSlimes();
+        moveSlimes(true, false); 
         return;
     }
 
     playerPOS.x = nextX;
     playerPOS.y = nextY;
     POS();
-    moveSlimes();
+    
+    moveSlimes(false, false);
 }
 
 document.addEventListener('keydown', (e) => {
